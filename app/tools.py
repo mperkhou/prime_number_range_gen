@@ -27,10 +27,15 @@ def findPrimes(input1: str, input2: str) -> list:
     #   Find and append all prime numbers from range to empty output list
     output = []
     for num in range(lower, upper + 1):
-        if num > 1:
+        if num > 1: # Note: this elimates possiblity of divide by 0 error
             for i in range(2, num):
                 if (num % i) == 0:
                     break
             else:
                 output.append(num)
-    return output
+
+    if bool(output):
+        return output
+    else:
+        print(f"There are no prime numbers in the range of {lower} - {upper} ")
+        return None
