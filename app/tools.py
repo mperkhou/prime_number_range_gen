@@ -1,3 +1,4 @@
+from find_primes import find_primes_in_range
 def findPrimes(input1: str, input2: str) -> list:
     #   check to make sure inputs are valid integers
     try:
@@ -25,14 +26,7 @@ def findPrimes(input1: str, input2: str) -> list:
     lower, upper = min(input1, input2), max(input1, input2)
 
     #   Find and append all prime numbers from range to empty output list
-    output = []
-    for num in range(lower, upper + 1):
-        if num > 1: # Note: this elimates possiblity of divide by 0 error
-            for i in range(2, num):
-                if (num % i) == 0:
-                    break
-            else:
-                output.append(num)
+    output = find_primes_in_range(lower, upper)
 
     if bool(output):
         return output
