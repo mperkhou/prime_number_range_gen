@@ -8,6 +8,9 @@
 
 Option 1: Using app.zip
 
+*Note: after compiling the algorithm module, this will still run the pre-compiled version. You can*
+*use this to compare runtimes againt the compiled version*
+
 Make sure 'app.zip' is located in your working directory.
 
 
