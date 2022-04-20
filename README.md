@@ -36,7 +36,28 @@ or:
 
 ---
 
-Option 3: Optimize speed (2x more effecient)
+Option 3: Optimize Speed (via Docker & compiling)
+
+1) Create docker image. Run dockerfile from /app directory.
+do
+` \app> docker build -f Dockerfile -t myapp . `
+
+2) Run container
+
+` \app> docker run -rm -it --name app myapp `
+
+3) Follow prompts
+
+To run tests:
+
+1) Run container again but with different CMD
+
+` \app> docker run --rm -it --name app myapp python test.py `
+
+
+---
+
+Option 4: Optimize speed (local)
 
 First, install Cython
 
